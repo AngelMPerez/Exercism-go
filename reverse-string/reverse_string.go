@@ -1,14 +1,17 @@
 package reverse
-import "fmt"
+import "bytes"
 
 
 func Reverse(x string)(string){
-	// var y string
-	var index int
-	for index=0;index<len(x);index=index+1{
-		fmt.Printf("%s", x)
-		// y=x[index]+y
-		
+	var y bytes.Buffer
+	// var index int
+	if(len(x)==0){
+		return x
+	}else{
+		for i := len(x)-1; i >= 0; i-- {
+			s := string([]byte{x[i]})
+			y.WriteString(s)
+		}
+		return y.String()
 	}
-	return x
 }
