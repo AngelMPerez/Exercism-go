@@ -11,5 +11,10 @@ func ShareWith(name string) string {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
-	return ""
+	if(len(name)==0){
+		return "One for you, one for me."
+	}else{
+		return ("One for "+ name +", one for me.")
+	}
+
 }
